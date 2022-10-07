@@ -48,5 +48,5 @@ The application should allow the user to interact with it to define the plateau 
 We will evaluate your code structure, readability, organization, clean code, and of course if the application works as expected.
 
 
-### Run the project
+### Running Application
 * Run `npm test` in the project root folder to start the application.
