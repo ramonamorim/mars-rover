@@ -1,5 +1,5 @@
 # Mars Rover Test
-This project is about a test implementation for move a Nasa rover on mars using nodejs
+This project is about a test implementation for launch and move a Nasa rover on mars using nodejs
 
 
 # Mars Rover in JavaScript
@@ -49,4 +49,11 @@ We will evaluate your code structure, readability, organization, clean code, and
 
 
 ### Running Application
-* Run `npm test` in the project root folder to start the application.
+* Run `npm start` in the project root folder to start the application.
+
+### Running Unit Test
+* Run `npm test` in the project root folder to run the unit test.
+* To generate the coverage use this command: `npx jest --coverage=true --outputfile=coverage`, then will be create a folder inside the project with the name coverage. Open the directory `coverage/lcov-report` and open the index.html to see the result of the tests.
+
+### Result of Unit Tests
+![image](https://user-images.githubusercontent.com/5633447/194676257-d15d4d93-28d7-4175-ab36-7761859d7eed.png)
