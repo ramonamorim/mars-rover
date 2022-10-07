@@ -1,0 +1,15 @@
+{
+  "name": "voyager-rover-test",
+  "version": "1.0.0",
+  "description": "voyager rover",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "jest"
+  },
+  "author": "ramonamorim",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
