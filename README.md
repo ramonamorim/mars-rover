@@ -56,4 +56,4 @@ We will evaluate your code structure, readability, organization, clean code, and
 * To generate the coverage use this command: `npx jest --coverage=true --outputfile=coverage`, then will be create a folder inside the project with the name coverage. Open the directory `coverage/lcov-report` and open the index.html to see the result of the tests.
 
 ### Result of Unit Tests
-![image](https://user-images.githubusercontent.com/5633447/194676257-d15d4d93-28d7-4175-ab36-7761859d7eed.png)
+![coverage](https://user-images.githubusercontent.com/5633447/195645354-fe8a1ebc-ff0f-4e3d-8af1-800bbf505883.png)
