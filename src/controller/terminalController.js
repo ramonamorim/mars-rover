@@ -1,5 +1,4 @@
 const Plateau = require("../model/plateau");
-const constants = require("../utils/constants");
 const Constants = require("../utils/constants");
 
 class TerminalController {

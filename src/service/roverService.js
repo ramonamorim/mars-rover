@@ -37,6 +37,7 @@ class RoverService {
     let rover = this.roverRep.findById(index);
 
     instructions.forEach((instruction) => {
+      instruction = instruction.toUpperCase();
       if (Constants.instruction.directionInstructions.includes(instruction)) {
         rover.direction = Constants.instruction[rover.direction][instruction];
       } else {

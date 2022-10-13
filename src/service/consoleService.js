@@ -14,6 +14,7 @@ class ConsoleService {
         if (!line) {
           reject(Constants.errors.readLineError);
         }
+        line = line.toUpperCase();
         if (splitLine) {
           line = line.split(splitLine);
         }
