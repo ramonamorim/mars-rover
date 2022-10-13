@@ -12,7 +12,7 @@ class RoverService {
       index,
       landingPositionX,
       landingPositionY,
-      landingDirection
+      landingDirection.toUpperCase()
     );
     this.roverRep.save(rover);
   }

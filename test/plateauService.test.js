@@ -20,6 +20,7 @@ test("test valid position - isValidPlateau ", () => {
 
   plateauService.save(new Plateau(10, 10));
 
+  expect(plateauService.isValidPosition(0, 0)).toBeTruthy();
   expect(plateauService.isValidPosition(1, 1)).toBeTruthy();
   expect(plateauService.isValidPosition(9, 9)).toBeTruthy();
   expect(() => plateauService.isValidPosition(9, -1)).toThrow(

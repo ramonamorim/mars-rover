@@ -17,10 +17,14 @@ beforeEach(() => {
 
 test("save rover test success", () => {
   roverService.initializeRover(0, 1, 1, "N");
+  roverService.initializeRover(1, 0, 0, "n");
+
   expect(roverService.findById(0)).not.toBeNull();
   expect(roverService.findById(0).toString()).toBe("1 1 N");
   expect(roverService.findById(0).displayRoverAttributes()).toBe("Rover 0: 1 1 N");
-  expect(roverService.listRovers().length).toBe(1);
+  expect(roverService.findById(1).toString()).toBe("0 0 N");
+  expect(roverService.findById(1).displayRoverAttributes()).toBe("Rover 1: 0 0 N");
+  expect(roverService.listRovers().length).toBe(2);
 });
 
 test("invalid position for Rover initialize - isValidPosition", () => {
