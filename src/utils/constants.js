@@ -18,7 +18,7 @@ module.exports = {
     errorInitPlateau: "invalid input for create plateau",
     errorInput: "Invalid input please verify",
     errorInvalidRoverPosition:
-      "Invalid landing position, is not valid for the plateau: {} {}",
+      "Invalid position, is not valid for the plateau: {} {}",
     errorInvalidRover: "Already exist a rover in this position: {} {}",
     errorInvalidDiretionOrPosition:
       "Invalid landing position, check the cordinates, the direction and try again",

@@ -26,8 +26,8 @@ class TerminalController {
       if (
         isNaN(positionX) ||
         isNaN(positionY) ||
-        Number(positionX) < 1 ||
-        Number(positionY) < 1
+        Number(positionX) < 0 ||
+        Number(positionY) < 0
       ) {
         throw Constants.errors.errorInitPlateau;
       }
@@ -69,8 +69,8 @@ class TerminalController {
       if (
         isNaN(positionX) ||
         isNaN(positionY) ||
-        Number(positionX) < 1 ||
-        Number(positionY) < 1 ||
+        Number(positionX) < 0 ||
+        Number(positionY) < 0 ||
         Constants.direction.list.includes(direction) == false
       ) {
         throw Constants.errors.errorInvalidDiretionOrPosition;
@@ -122,30 +122,29 @@ class TerminalController {
 
       switch (optionMenu) {
         case Constants.menu.move:
-          let index = await this.console.read(
-            Constants.message.selectRoverTomove
-          );
-          index = Number(index);
-          const rover = this.roverService.findById(index);
-          if (rover == null) {
-            throw Constants.errors.errorRoverNotFound;
-          }
-          await this.insertInstructions(index);
+          await this.movementValidateInstructions();
           break;
         case Constants.menu.list:
           this.displayRovers();
           break;
         case Constants.menu.quit:
           process.exit(0);
-          break;
-        default:
-          break;
       }
     } catch (error) {
       console.log(error);
       this.printl(error);
     }
     await this.menu();
+  }
+
+  async movementValidateInstructions() {
+    let index = await this.console.read(Constants.message.selectRoverTomove);
+    index = Number(index);
+    const rover = this.roverService.findById(index);
+    if (rover == null) {
+      throw Constants.errors.errorRoverNotFound;
+    }
+    await this.insertInstructions(index);
   }
 
   displayRovers() {
